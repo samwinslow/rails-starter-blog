@@ -1,24 +1,10 @@
-# README
+# Rails 7 starter blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby 3.1.0, Rails 7.0 (edge - use `main` Rails branch until [https://github.com/rails/rails/issues/43998](https://github.com/rails/rails/issues/43998) is resolved)
 
-Things you may want to cover:
+## TODO
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Set up AWS EBS hosting
+- Amazon Polly text-to-speech for article accessibility?
+  - Add create/update hooks to post API which sends the job to Polly
+  - Add field to post model which contains the S3 url of each Polly-generated MP3
