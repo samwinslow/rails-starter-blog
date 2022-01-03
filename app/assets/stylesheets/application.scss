@@ -1,3 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+$base_font_size: 16px;
+$primary_color: #00CF72;
+$text_color: #444;
+
 html, body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+a {
+  color: $primary_color;
+
+  &:link, &:hover, &:visited, &:active {
+    color: $primary_color;
+  }
+}
+
+form {
+  & > div {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+a, input, textarea, button {
+  border-radius: 0.3rem;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $primary_color;
+  }
+}
+
+textarea {
+  resize: vertical;
+  height: 8em;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid $text_color;
+}
+
+input[type="submit"], input[type="button"], button {
+  border: 1px solid $primary_color;
+  background: $primary_color;
+  color: #fff;
+  font-size: $base_font_size;
+  padding: 0.75rem;
+
+  &:focus {
+    border: 1px solid $text_color;
+  }
 }
